@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package inference_server;
+
+service Inference {
+  // Sends a greeting
+  rpc Compute (Input) returns (Output) {}
+}
+
+message Input {
+  uint64 batch_id = 1;
+}
+
+message Output {
+  uint64 batch_id = 1;
+}
